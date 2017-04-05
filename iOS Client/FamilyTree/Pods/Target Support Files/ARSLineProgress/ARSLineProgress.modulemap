@@ -1,0 +1,6 @@
+framework module ARSLineProgress {
+  umbrella header "ARSLineProgress-umbrella.h"
+
+  export *
+  module * { export * }
+}
