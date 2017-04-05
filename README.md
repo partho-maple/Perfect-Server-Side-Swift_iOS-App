@@ -20,7 +20,7 @@
 A family tree API server implementation with iOS client. Server has been implemented with [Perfect: Server-Side Swift](https://github.com/PerfectlySoft/Perfect) And iOS client is in pure Swift.
 
 <p align="center" >★★ <b>Star our github repository to help us!</b> ★★</p>
-<p align="center" >Created by <a href="http://parthobiswas.com/">Partho Biswas</a> (<a href="http://www.twitter.com/ParthoBiswas007">@danielemargutti</a>)</p>
+<p align="center" >Created by <a href="http://parthobiswas.com/">Partho Biswas</a> (<a href="http://www.twitter.com/ParthoBiswas007">@ParthoBiswas007</a>)</p>
 
 ## What's in it
 
