@@ -37,10 +37,10 @@ A family tree API server implementation with iOS client. Server has been impleme
 A native Android version of this iOS app is also available at this [repository](https://github.com/partho-maple/Perfect-Server-Side-Swift_android-App).
 
 ## Setup and configurations
-A detailed setup and configuration can be found [here](https://github.com/partho-maple/Perfect-Server-Side-Swift_iOS-App/blob/master/Setup.pdf). 
+A detailed setup and configuration guide can be found [here](https://github.com/partho-maple/Perfect-Server-Side-Swift_iOS-App/blob/master/Setup.pdf). 
 
 ## Architecture and design
-A detailed architectural design of the app can be found [here](https://github.com/partho-maple/Perfect-Server-Side-Swift_iOS-App/blob/master/Design%20Details.pdf). guide
+A detailed architectural design guide of the app can be found [here](https://github.com/partho-maple/Perfect-Server-Side-Swift_iOS-App/blob/master/Design%20Details.pdf). 
 
 ## Contributing
 
