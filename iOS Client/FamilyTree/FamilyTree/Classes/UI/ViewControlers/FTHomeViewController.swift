@@ -103,17 +103,7 @@ class FTHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
-        //        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-        //        let controller: FTAddPersonTableViewController = storyboard.instantiateViewController(withIdentifier: addViewControllerIdentifire) as! FTAddPersonTableViewController
-        //
-        //        let mySSN = Defaults[.mySSN]
-        //        if (mySSN == nil) {
-        //            controller.isAddingRelation = false
-        //        } else {
-        //            controller.isAddingRelation = true
-        //        }
-        //
-        //        self.present(controller, animated: true, completion: nil)
+
         
         if let viewController = UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: addViewControllerIdentifire) as? FTAddPersonTableViewController {
             
@@ -129,96 +119,6 @@ class FTHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
-    
-    //MARK:  Node/Data Functions
-    
-    func expandCollapseNode(_ notification: Notification) {
-        self.LoadDisplayArray()
-        
-        DispatchQueue.main.async {
-            self.famityTreeTableView.reloadData()
-            self.showNoDataFoundViewIfNeeded(self.displayArray.count)
-        }
-    }
-    
-    
-    func LoadDisplayArray() {
-        self.displayArray = [TreeViewNode]()
-        for node: TreeViewNode in nodes {
-            self.displayArray.append(node)
-            if (node.isExpanded == true) {
-                self.addChildrenArray(node.nodeChildren as! [TreeViewNode])
-            }
-        }
-    }
-    
-    func addChildrenArray(_ childrenArray: [TreeViewNode]) {
-        for node: TreeViewNode in childrenArray {
-            self.displayArray.append(node)
-            if (node.isExpanded == true ) {
-                if (node.nodeChildren != nil) {
-                    self.addChildrenArray(node.nodeChildren as! [TreeViewNode])
-                }
-            }
-        }
-    }
-    
-    //
-    //    func LoadDisplayArray() {
-    //        self.displayArray = [TreeViewNode]()
-    //        for node: TreeViewNode in nodes {
-    //            self.displayArray.append(node)
-    //            if (node.nodeChildren != nil) {
-    //                node.isExpanded = true
-    //                self.addChildrenArray(node.nodeChildren as! [TreeViewNode])
-    //            }
-    //        }
-    //    }
-    //
-    //    func addChildrenArray(_ childrenArray: [TreeViewNode]) {
-    //        for node: TreeViewNode in childrenArray {
-    //            self.displayArray.append(node)
-    ////            if (node.isExpanded == false ) {
-    //                if (node.nodeChildren != nil) {
-    //                    node.isExpanded = true
-    //                    self.addChildrenArray(node.nodeChildren as! [TreeViewNode])
-    //                }
-    ////            }
-    //        }
-    //    }
-    //
-    //
-    //
-    //    func reloadDisplayArray() {
-    //        self.displayArray = [TreeViewNode]()
-    //        for node: TreeViewNode in nodes {
-    //            self.displayArray.append(node)
-    //            if (node.isExpanded == true) {
-    //                self.reAddChildrenArray(node.nodeChildren as! [TreeViewNode])
-    //            }
-    //        }
-    //    }
-    //
-    //    func reAddChildrenArray(_ childrenArray: [TreeViewNode]) {
-    //        for node: TreeViewNode in childrenArray {
-    //            self.displayArray.append(node)
-    //            if (node.isExpanded == true ) {
-    //                if (node.nodeChildren != nil) {
-    //                    self.reAddChildrenArray(node.nodeChildren as! [TreeViewNode])
-    //                }
-    //            }
-    //        }
-    //    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     // MARK: - Table view data source
@@ -262,36 +162,10 @@ class FTHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.performSegue(withIdentifier: "TreeToDetailsSegue", sender: indexPath)
     }
     
-    // MARK: - Utility methodes
     
     
-    func getIndexPathForSelectedCell() -> IndexPath? {
-        var indexPath:IndexPath?
-        
-        if self.famityTreeTableView.indexPathsForSelectedRows!.count > 0 {
-            indexPath = self.famityTreeTableView.indexPathsForSelectedRows![0]
-        }
-        return indexPath
-    }
+    //MARK:  API calls Functions
     
-    func showNoDataFoundViewIfNeeded(_ rows: Int) {
-        if rows == 0 {
-            let imageview = UIImageView(frame: self.view.bounds)
-            imageview.contentMode = .scaleAspectFill
-            let imageName: String = kTableViewBGImageName
-            imageview.image = UIImage(named: imageName)
-            self.famityTreeTableView.backgroundView = imageview
-            self.famityTreeTableView.separatorColor = UIColor.clear
-        }
-        else {
-            self.famityTreeTableView.backgroundView = nil
-            self.famityTreeTableView.separatorColor = UIColor(red: CGFloat(214.0 / 255), green: CGFloat(213.0 / 255), blue: CGFloat(214.0 / 255), alpha: CGFloat(1.0))
-        }
-    }
-    
-    
-    
-    // MARK: - New Utility Methodes
     func fetchLoadFamilyTreeData(ssn: String) {
         ARSLineProgress.show()
         do {
@@ -304,7 +178,7 @@ class FTHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                             if (relations != nil) {
                                 print((relations?.toJSONString(prettyPrint: true))! as String)
                                 
-                                //  Creating datasource here.
+                                //MARK:  Creating tree datasource here.
                                 self.nodes = self.loadInitialNodes(self.createDataSourceWith(person: person!, relationDetails: relations!))
                                 self.LoadDisplayArray()
                                 
@@ -332,38 +206,41 @@ class FTHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    func createDataSourceWith(person: PersonDetails, relationDetails: [RelationshipDetails]) -> [TreeViewData]
-    {
-        var data: [TreeViewData] = []
-        
-        let rootNode: RelationshipDetails? = RelationshipDetails()
-        rootNode?.setRelationshipDetails(ssn: person.social_security_number!, name: person.name!, gender: person.gender!, date_of_birth: person.date_of_birth, date_of_death: person.date_of_death, relation: "It's Me", relation_id: 0, relatives: nil)
-        
-        data.append(TreeViewData(level: 0, details: rootNode!, id: (rootNode?.social_security_number)!, parentId: "-1")!)
-        
-        return self.addNodeToDataSourceWith(lavel: 0, relations: relationDetails, parentID: (rootNode?.social_security_number)!, currentNodeList: &data)
-        
-    }
     
-    func addNodeToDataSourceWith(lavel: Int, relations: [RelationshipDetails], parentID: String, currentNodeList: inout [TreeViewData]) -> [TreeViewData] {
+    //MARK:  Node/Data Functions
+    
+    func expandCollapseNode(_ notification: Notification) {
+        self.LoadDisplayArray()
         
-        for relation in relations {
-            
-            currentNodeList.append(TreeViewData(level: (lavel + 1), details: relation, id: (relation.social_security_number)!, parentId: parentID)!)
-            
-            if (relation.relatives != nil) {
-                self.addNodeToDataSourceWith(lavel: (lavel + 1), relations: relation.relatives!, parentID: relation.social_security_number!, currentNodeList: &currentNodeList)
-            }
-            
+        DispatchQueue.main.async {
+            self.famityTreeTableView.reloadData()
+            self.showNoDataFoundViewIfNeeded(self.displayArray.count)
         }
-        return currentNodeList
     }
     
     
+    func LoadDisplayArray() {
+        self.displayArray = [TreeViewNode]()
+        for node: TreeViewNode in nodes {
+            self.displayArray.append(node)
+            if (node.isExpanded == true) {
+                self.addChildrenArray(node.nodeChildren as! [TreeViewNode])
+            }
+        }
+    }
     
+    func addChildrenArray(_ childrenArray: [TreeViewNode]) {
+        for node: TreeViewNode in childrenArray {
+            self.displayArray.append(node)
+            if (node.isExpanded == true ) {
+                if (node.nodeChildren != nil) {
+                    self.addChildrenArray(node.nodeChildren as! [TreeViewNode])
+                }
+            }
+        }
+    }
     
-    
-    
+     //MARK:  Creating tree view data source here.
     
     func loadInitialNodes(_ dataList: [TreeViewData]) -> [TreeViewNode] {
         var nodes: [TreeViewNode] = []
@@ -387,6 +264,33 @@ class FTHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return nodes
     }
     
+    func createDataSourceWith(person: PersonDetails, relationDetails: [RelationshipDetails]) -> [TreeViewData]
+    {
+        var data: [TreeViewData] = []
+        
+        let rootNode: RelationshipDetails? = RelationshipDetails()
+        rootNode?.setRelationshipDetails(ssn: person.social_security_number!, name: person.name!, gender: person.gender!, date_of_birth: person.date_of_birth, date_of_death: person.date_of_death, relation: "It's Me", relation_id: 0, relatives: nil)
+        
+        data.append(TreeViewData(level: 0, details: rootNode!, id: (rootNode?.social_security_number)!, parentId: "-1")!)
+        
+        return self.addNodeToDataSourceWith(lavel: 0, relations: relationDetails, parentID: (rootNode?.social_security_number)!, currentNodeList: &data)
+        
+    }
+    
+    
+    func addNodeToDataSourceWith(lavel: Int, relations: [RelationshipDetails], parentID: String, currentNodeList: inout [TreeViewData]) -> [TreeViewData] {
+        
+        for relation in relations {
+            
+            currentNodeList.append(TreeViewData(level: (lavel + 1), details: relation, id: (relation.social_security_number)!, parentId: parentID)!)
+            
+            if (relation.relatives != nil) {
+                self.addNodeToDataSourceWith(lavel: (lavel + 1), relations: relation.relatives!, parentID: relation.social_security_number!, currentNodeList: &currentNodeList)
+            }
+            
+        }
+        return currentNodeList
+    }
     
     //MARK:  Recursive Method to Create the Children/Grandchildren....  node arrays
     
@@ -412,6 +316,34 @@ class FTHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         return nodes
+    }
+    
+    
+    // MARK: - Utility methodes
+    
+    
+    func getIndexPathForSelectedCell() -> IndexPath? {
+        var indexPath:IndexPath?
+        
+        if self.famityTreeTableView.indexPathsForSelectedRows!.count > 0 {
+            indexPath = self.famityTreeTableView.indexPathsForSelectedRows![0]
+        }
+        return indexPath
+    }
+    
+    func showNoDataFoundViewIfNeeded(_ rows: Int) {
+        if rows == 0 {
+            let imageview = UIImageView(frame: self.view.bounds)
+            imageview.contentMode = .scaleAspectFill
+            let imageName: String = kTableViewBGImageName
+            imageview.image = UIImage(named: imageName)
+            self.famityTreeTableView.backgroundView = imageview
+            self.famityTreeTableView.separatorColor = UIColor.clear
+        }
+        else {
+            self.famityTreeTableView.backgroundView = nil
+            self.famityTreeTableView.separatorColor = UIColor(red: CGFloat(214.0 / 255), green: CGFloat(213.0 / 255), blue: CGFloat(214.0 / 255), alpha: CGFloat(1.0))
+        }
     }
     
 }
