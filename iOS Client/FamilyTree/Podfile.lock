@@ -4,6 +4,11 @@ PODS:
   - Former (1.5.1)
   - IQKeyboardManager (4.0.8)
   - ObjectMapper (2.2.5)
+  - Realm (2.6.2):
+    - Realm/Headers (= 2.6.2)
+  - Realm/Headers (2.6.2)
+  - RealmSwift (2.6.2):
+    - Realm (= 2.6.2)
   - Siesta (1.1.0):
     - Siesta/Core (= 1.1.0)
   - Siesta/Alamofire (1.1.0):
@@ -15,6 +20,7 @@ PODS:
   - SwiftDate (4.0.13)
   - SwiftyJSON (3.1.4)
   - SwiftyUserDefaults (3.0.0)
+  - Swinject (2.1.0)
   - Toaster (2.0.3)
 
 DEPENDENCIES:
@@ -22,12 +28,14 @@ DEPENDENCIES:
   - Former
   - IQKeyboardManager
   - ObjectMapper (~> 2.2)
+  - RealmSwift
   - Siesta (~> 1.0)
   - Siesta/Alamofire (~> 1.0)
   - Siesta/UI (~> 1.0)
   - SwiftDate (~> 4.0)
   - SwiftyJSON
   - SwiftyUserDefaults
+  - Swinject (~> 2.1.0)
   - Toaster (~> 2.0)
 
 SPEC CHECKSUMS:
@@ -36,12 +44,15 @@ SPEC CHECKSUMS:
   Former: 0b48a812c0d93b092b908d1b0574d0fd95c6b6f9
   IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  Realm: 29222766425b9f831228f81b63f0e38a97a4d700
+  RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
   Siesta: ada9f35255e4eb16fad45cc3080927f6c6cba9cc
   SwiftDate: 8ec416bb1b5129d1f35e8efaed720421f41d42df
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
+  Swinject: 85e468ac75c5c2d234076f98c591d57d56bc64bc
   Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
 
-PODFILE CHECKSUM: d481bb8112fefc4ac6a93aec07b456c438ba546a
+PODFILE CHECKSUM: 9edd02406a3574ecdd6b6fd84473f2c61f37e6a4
 
 COCOAPODS: 1.2.0

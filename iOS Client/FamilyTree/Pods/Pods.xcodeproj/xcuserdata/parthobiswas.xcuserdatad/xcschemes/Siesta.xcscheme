@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C8BABEDBA6CECC9EFEA75C252BA7559E'
+               BlueprintIdentifier = 'AD1454631D5F93A007F83443A36DE54A'
                BlueprintName = 'Siesta'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Siesta.framework'>

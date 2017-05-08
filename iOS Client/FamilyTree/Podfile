@@ -17,5 +17,16 @@ target 'FamilyTree' do
   pod 'SwiftyUserDefaults'
   pod 'Former'
   pod 'SwiftDate', '~> 4.0'
+  pod 'Swinject', '~> 2.1.0'
+  pod 'RealmSwift'
 
+end
+
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
 end

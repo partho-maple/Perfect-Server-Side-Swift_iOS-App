@@ -1,4 +1,5 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D10B711B59D2F58A64DECCE4E073819D685147EF",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
@@ -9,6 +10,7 @@
     "5DE71891E68481B19F14057D90BF987D8451F5BA" : 9223372036854775807,
     "D29B450053EFE7F16640D64672B63711A39399E1" : 9223372036854775807,
     "735A06A83BD3E78D8C3B53C09F33A6FB7CEBF8E1" : 9223372036854775807,
+    "D10B711B59D2F58A64DECCE4E073819D685147EF" : 9223372036854775807,
     "C4127C9B9C8FDF608B532AD72407863CE2797629" : 9223372036854775807,
     "615FD99B652E80AC2E813EEEE7964BA10A9886D5" : 9223372036854775807,
     "3B905509A4DD1F5305D27EF37A9F71F239F93941" : 9223372036854775807,
@@ -22,6 +24,7 @@
     "5DE71891E68481B19F14057D90BF987D8451F5BA" : "Perfect-Server-Side-Swift_iOS-App\/Server\/FamilyTree-Backend\/Packages\/PerfectTurnstileMySQL-1.0.7\/",
     "D29B450053EFE7F16640D64672B63711A39399E1" : "Perfect-Server-Side-Swift_iOS-App\/Server\/FamilyTree-Backend\/Packages\/TurnstilePerfect-2.0.2\/",
     "735A06A83BD3E78D8C3B53C09F33A6FB7CEBF8E1" : "Perfect-Server-Side-Swift_iOS-App\/Server\/FamilyTree-Backend\/Packages\/PerfectLogger-1.0.0\/",
+    "D10B711B59D2F58A64DECCE4E073819D685147EF" : "Perfect-Server-Side-Swift_iOS-App\/",
     "C4127C9B9C8FDF608B532AD72407863CE2797629" : "Perfect-Server-Side-Swift_iOS-App\/Server\/FamilyTree-Backend\/Packages\/PerfectHTTPServer-2.1.14\/",
     "615FD99B652E80AC2E813EEEE7964BA10A9886D5" : "Perfect-Server-Side-Swift_iOS-App\/Server\/FamilyTree-Backend\/Packages\/PerfectThread-2.0.9\/",
     "3B905509A4DD1F5305D27EF37A9F71F239F93941" : "Perfect-Server-Side-Swift_iOS-App\/Server\/FamilyTree-Backend\/Packages\/PerfectCURL-2.0.4\/",
@@ -75,6 +78,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PerfectlySoft\/Perfect-HTTPServer.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C4127C9B9C8FDF608B532AD72407863CE2797629"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/partho-maple\/Perfect-Server-Side-Swift_iOS-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D10B711B59D2F58A64DECCE4E073819D685147EF"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PerfectSideRepos\/Turnstile-Perfect.git",

@@ -46,7 +46,7 @@ struct MySQL_Server_Config {
 
 struct HTTP_Server_Config {
     
-    public static let serverAddress = "192.168.0.103"
+    public static let serverAddress = "192.168.0.102"
     public static let letserverName = "localhost"
     public static let letserverPort = 8181
     public static let documentRoot = "webroot"

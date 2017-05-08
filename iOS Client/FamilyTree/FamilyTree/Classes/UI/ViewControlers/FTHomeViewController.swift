@@ -32,6 +32,8 @@ class FTHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.famityTreeTableView.dataSource = self
         NotificationCenter.default.addObserver(self, selector: #selector(FTHomeViewController.expandCollapseNode(_:)), name: NSNotification.Name(rawValue: "TreeNodeButtonClicked"), object: nil)
         
+        Defaults[.mySSN] = "Partho007"
+        
         let mySSN = Defaults[.mySSN]
         
         if (mySSN == nil) {
