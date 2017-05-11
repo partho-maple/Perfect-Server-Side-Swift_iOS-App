@@ -11,6 +11,7 @@ import SwiftyUserDefaults
 import Foundation
 import Former
 import ARSLineProgress
+import Swinject
 
 class FTPersonDetailsTableViewController: FormViewController { //UITableViewController {
     

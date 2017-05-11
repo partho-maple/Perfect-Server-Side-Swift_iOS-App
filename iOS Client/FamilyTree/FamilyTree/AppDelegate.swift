@@ -8,6 +8,8 @@
 
 import UIKit
 import IQKeyboardManager
+import Swinject
+import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,9 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        self.applyDefaultAppearance()
-        IQKeyboardManager.shared().isEnabled = true
         
         /*
         //  Creating me
@@ -83,6 +82,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         */
         
+        
+//        let assembler = try! Assembler(assemblies: [FamilyTreeAssembly()])
+//        let viewController = assembler.resolver.resolve(FTHomeViewController.self)!
+        
+        let storyboard = SwinjectStoryboard.create(name: "Main", bundle: nil, container: createContainer())
+        window?.rootViewController = storyboard.instantiateInitialViewController()
+        
+        
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = viewController
+//        window?.makeKeyAndVisible()
+        
+        
+        
+        
+        
+        
+        self.applyDefaultAppearance()
+        IQKeyboardManager.shared().isEnabled = true
+
         
         return true
     }

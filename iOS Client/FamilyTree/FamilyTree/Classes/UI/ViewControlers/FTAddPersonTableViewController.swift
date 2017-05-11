@@ -12,6 +12,7 @@ import Foundation
 import Former
 import Toaster
 import ARSLineProgress
+import Swinject
 
 class FTAddPersonTableViewController: FormViewController { //UITableViewController {
     

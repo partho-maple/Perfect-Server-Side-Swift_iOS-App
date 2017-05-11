@@ -17,8 +17,12 @@ target 'FamilyTree' do
   pod 'SwiftyUserDefaults'
   pod 'Former'
   pod 'SwiftDate', '~> 4.0'
-  pod 'Swinject', '~> 2.1.0'
+  pod 'Swinject'
+  pod 'SwinjectPropertyLoader'
+  pod 'SwinjectStoryboard'
+  pod 'SwinjectAutoregistration'
   pod 'RealmSwift'
+  pod 'EasyRealm', '~> 1.1.0'
 
 end
 

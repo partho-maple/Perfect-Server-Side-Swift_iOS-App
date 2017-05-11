@@ -17,12 +17,18 @@
 		7727AEFE1E799275007723E7 /* ProfileFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7727AEF81E799275007723E7 /* ProfileFieldCell.xib */; };
 		7727AF001E799275007723E7 /* ProfileLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7727AEFA1E799275007723E7 /* ProfileLabelCell.xib */; };
 		7727AF031E799336007723E7 /* FormerInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7727AF021E799336007723E7 /* FormerInputAccessoryView.swift */; };
+		7735C49A1EC2BE7B009A4C9E /* FTHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735C4991EC2BE7B009A4C9E /* FTHomeViewModel.swift */; };
+		7735C4A01EC2C384009A4C9E /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735C49E1EC2C384009A4C9E /* PersonModel.swift */; };
+		7735C4A11EC2C384009A4C9E /* RelationshipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735C49F1EC2C384009A4C9E /* RelationshipModel.swift */; };
 		773629D21E76D89500CBC794 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773629D11E76D89500CBC794 /* Utils.swift */; };
 		773629D81E76D8E100CBC794 /* NodeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773629D41E76D8E100CBC794 /* NodeDetails.swift */; };
 		773629D91E76D8E100CBC794 /* PersonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773629D51E76D8E100CBC794 /* PersonDetails.swift */; };
 		773629DA1E76D8E100CBC794 /* Relations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773629D61E76D8E100CBC794 /* Relations.swift */; };
 		773629DB1E76D8E100CBC794 /* RelationshipDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773629D71E76D8E100CBC794 /* RelationshipDetails.swift */; };
 		773629DD1E76E0CD00CBC794 /* FamilyTreeAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773629DC1E76E0CD00CBC794 /* FamilyTreeAPIManager.swift */; };
+		7738B2731EC3928D0075F237 /* FamilyTreeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738B2721EC3928D0075F237 /* FamilyTreeAPI.swift */; };
+		7738B2761EC3B6CE0075F237 /* FamilyTreeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738B2751EC3B6CE0075F237 /* FamilyTreeAssembly.swift */; };
+		7738B27F1EC3C9090075F237 /* SwinjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738B27E1EC3C9090075F237 /* SwinjectContainer.swift */; };
 		7740D55A1E901E8700D5812E /* FamilyTreeAPIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7740D5591E901E8700D5812E /* FamilyTreeAPIManagerTests.swift */; };
 		7740D55E1E902B4C00D5812E /* MockModelsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7740D55D1E902B4C00D5812E /* MockModelsUtil.swift */; };
 		774DB54F1E6EED39002E941B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DB54E1E6EED39002E941B /* AppDelegate.swift */; };
@@ -66,12 +72,18 @@
 		7727AEFA1E799275007723E7 /* ProfileLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileLabelCell.xib; sourceTree = "<group>"; };
 		7727AF021E799336007723E7 /* FormerInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerInputAccessoryView.swift; sourceTree = "<group>"; };
 		77321D331E8EC3360035DECA /* FamilyTreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FamilyTreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7735C4991EC2BE7B009A4C9E /* FTHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTHomeViewModel.swift; sourceTree = "<group>"; };
+		7735C49E1EC2C384009A4C9E /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		7735C49F1EC2C384009A4C9E /* RelationshipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipModel.swift; sourceTree = "<group>"; };
 		773629D11E76D89500CBC794 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		773629D41E76D8E100CBC794 /* NodeDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeDetails.swift; sourceTree = "<group>"; };
 		773629D51E76D8E100CBC794 /* PersonDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetails.swift; sourceTree = "<group>"; };
 		773629D61E76D8E100CBC794 /* Relations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relations.swift; sourceTree = "<group>"; };
 		773629D71E76D8E100CBC794 /* RelationshipDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipDetails.swift; sourceTree = "<group>"; };
 		773629DC1E76E0CD00CBC794 /* FamilyTreeAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyTreeAPIManager.swift; sourceTree = "<group>"; };
+		7738B2721EC3928D0075F237 /* FamilyTreeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyTreeAPI.swift; sourceTree = "<group>"; };
+		7738B2751EC3B6CE0075F237 /* FamilyTreeAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FamilyTreeAssembly.swift; path = DI/FamilyTreeAssembly.swift; sourceTree = "<group>"; };
+		7738B27E1EC3C9090075F237 /* SwinjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwinjectContainer.swift; path = DI/SwinjectContainer.swift; sourceTree = "<group>"; };
 		7740D5591E901E8700D5812E /* FamilyTreeAPIManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyTreeAPIManagerTests.swift; sourceTree = "<group>"; };
 		7740D55B1E90200A00D5812E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7740D55D1E902B4C00D5812E /* MockModelsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockModelsUtil.swift; sourceTree = "<group>"; };
@@ -174,6 +186,23 @@
 			path = FamilyTreeTests;
 			sourceTree = "<group>";
 		};
+		7735C4981EC2BDD7009A4C9E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7735C4991EC2BE7B009A4C9E /* FTHomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7735C49D1EC2C384009A4C9E /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				7735C49E1EC2C384009A4C9E /* PersonModel.swift */,
+				7735C49F1EC2C384009A4C9E /* RelationshipModel.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		773629D31E76D8E100CBC794 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +212,15 @@
 				773629D71E76D8E100CBC794 /* RelationshipDetails.swift */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		7738B2741EC3B67E0075F237 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7738B27E1EC3C9090075F237 /* SwinjectContainer.swift */,
+				7738B2751EC3B6CE0075F237 /* FamilyTreeAssembly.swift */,
+			);
+			name = DI;
 			sourceTree = "<group>";
 		};
 		7740D5521E901D8700D5812E /* Cases */ = {
@@ -243,8 +281,10 @@
 			isa = PBXGroup;
 			children = (
 				774DB54E1E6EED39002E941B /* AppDelegate.swift */,
-				774DB5611E6EF21E002E941B /* API */,
+				7738B2741EC3B67E0075F237 /* DI */,
 				774DB5671E6EF21E002E941B /* AppearanceHelpers */,
+				774DB5611E6EF21E002E941B /* API */,
+				7735C4981EC2BDD7009A4C9E /* ViewModels */,
 				774DB56C1E6EF21E002E941B /* Models */,
 				774DB56F1E6EF21E002E941B /* UI */,
 				774DB5741E6EF21E002E941B /* Utils */,
@@ -255,6 +295,7 @@
 		774DB5611E6EF21E002E941B /* API */ = {
 			isa = PBXGroup;
 			children = (
+				7738B2721EC3928D0075F237 /* FamilyTreeAPI.swift */,
 				773629DC1E76E0CD00CBC794 /* FamilyTreeAPIManager.swift */,
 			);
 			path = API;
@@ -274,6 +315,7 @@
 		774DB56C1E6EF21E002E941B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7735C49D1EC2C384009A4C9E /* Database */,
 				773629D31E76D8E100CBC794 /* JSON */,
 			);
 			name = Models;
@@ -507,11 +549,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7727AEF31E79926A007723E7 /* UIColor+FormerDemo.swift in Sources */,
+				7738B2731EC3928D0075F237 /* FamilyTreeAPI.swift in Sources */,
+				7735C4A11EC2C384009A4C9E /* RelationshipModel.swift in Sources */,
 				773629DD1E76E0CD00CBC794 /* FamilyTreeAPIManager.swift in Sources */,
 				77E895AB1E78248600B85C29 /* FamilyTreeTableViewCell.swift in Sources */,
 				773629D81E76D8E100CBC794 /* NodeDetails.swift in Sources */,
 				7727AEEE1E79925B007723E7 /* ProfileLabelCell.swift in Sources */,
 				774DB57E1E6EF21E002E941B /* UIColor+RABAppearance.swift in Sources */,
+				7735C4A01EC2C384009A4C9E /* PersonModel.swift in Sources */,
+				7738B27F1EC3C9090075F237 /* SwinjectContainer.swift in Sources */,
 				774DB5801E6EF21E002E941B /* UIResponder+RABAppearance.swift in Sources */,
 				77E895A71E781DBB00B85C29 /* TreeViewData.swift in Sources */,
 				773629D21E76D89500CBC794 /* Utils.swift in Sources */,
@@ -520,6 +566,7 @@
 				774DB54F1E6EED39002E941B /* AppDelegate.swift in Sources */,
 				774DB57F1E6EF21E002E941B /* UIFont+RABAppearance.swift in Sources */,
 				7727AF031E799336007723E7 /* FormerInputAccessoryView.swift in Sources */,
+				7738B2761EC3B6CE0075F237 /* FamilyTreeAssembly.swift in Sources */,
 				773629DA1E76D8E100CBC794 /* Relations.swift in Sources */,
 				7740D55E1E902B4C00D5812E /* MockModelsUtil.swift in Sources */,
 				7727AEDE1E797A5A007723E7 /* FTAddPersonTableViewController.swift in Sources */,
@@ -527,6 +574,7 @@
 				7727AEF21E79926A007723E7 /* String+FormerDemo.swift in Sources */,
 				7727AEDF1E797A5A007723E7 /* FTHomeViewController.swift in Sources */,
 				77E895A91E781DBB00B85C29 /* TreeViewNode.swift in Sources */,
+				7735C49A1EC2BE7B009A4C9E /* FTHomeViewModel.swift in Sources */,
 				7727AEEC1E79925B007723E7 /* ProfileFieldCell.swift in Sources */,
 				774DB5891E6EF21E002E941B /* Helper.swift in Sources */,
 				77E8959A1E77E85D00B85C29 /* DefaultsKeys.swift in Sources */,

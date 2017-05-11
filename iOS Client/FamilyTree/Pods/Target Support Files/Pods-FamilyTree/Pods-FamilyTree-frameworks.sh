@@ -91,6 +91,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ARSLineProgress/ARSLineProgress.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/EasyRealm/EasyRealm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Former/Former.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManager/IQKeyboardManager.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
@@ -101,11 +102,15 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyUserDefaults/SwiftyUserDefaults.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Swinject/Swinject.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwinjectAutoregistration/SwinjectAutoregistration.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwinjectPropertyLoader/SwinjectPropertyLoader.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwinjectStoryboard/SwinjectStoryboard.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Toaster/Toaster.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ARSLineProgress/ARSLineProgress.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/EasyRealm/EasyRealm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Former/Former.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManager/IQKeyboardManager.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ObjectMapper/ObjectMapper.framework"
@@ -116,6 +121,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyUserDefaults/SwiftyUserDefaults.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Swinject/Swinject.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwinjectAutoregistration/SwinjectAutoregistration.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwinjectPropertyLoader/SwinjectPropertyLoader.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwinjectStoryboard/SwinjectStoryboard.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Toaster/Toaster.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

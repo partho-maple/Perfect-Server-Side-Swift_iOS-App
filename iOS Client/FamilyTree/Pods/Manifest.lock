@@ -1,30 +1,39 @@
 PODS:
   - Alamofire (4.4.0)
-  - ARSLineProgress (2.1.0)
+  - ARSLineProgress (2.1.1)
+  - EasyRealm (1.1.3):
+    - RealmSwift (~> 2.4)
   - Former (1.5.1)
-  - IQKeyboardManager (4.0.8)
-  - ObjectMapper (2.2.5)
-  - Realm (2.6.2):
-    - Realm/Headers (= 2.6.2)
-  - Realm/Headers (2.6.2)
-  - RealmSwift (2.6.2):
-    - Realm (= 2.6.2)
-  - Siesta (1.1.0):
-    - Siesta/Core (= 1.1.0)
-  - Siesta/Alamofire (1.1.0):
+  - IQKeyboardManager (4.0.9)
+  - ObjectMapper (2.2.6)
+  - Realm (2.7.0):
+    - Realm/Headers (= 2.7.0)
+  - Realm/Headers (2.7.0)
+  - RealmSwift (2.7.0):
+    - Realm (= 2.7.0)
+  - Siesta (1.1.1):
+    - Siesta/Core (= 1.1.1)
+  - Siesta/Alamofire (1.1.1):
     - Alamofire (> 4.1)
     - Siesta/Core
-  - Siesta/Core (1.1.0)
-  - Siesta/UI (1.1.0):
+  - Siesta/Core (1.1.1)
+  - Siesta/UI (1.1.1):
     - Siesta/Core
-  - SwiftDate (4.0.13)
+  - SwiftDate (4.1.2)
   - SwiftyJSON (3.1.4)
   - SwiftyUserDefaults (3.0.0)
-  - Swinject (2.1.0)
+  - Swinject (2.0.0)
+  - SwinjectAutoregistration (2.0.1):
+    - Swinject (~> 2.0.0)
+  - SwinjectPropertyLoader (1.0.0):
+    - Swinject (~> 2.0.0)
+  - SwinjectStoryboard (1.1.1):
+    - Swinject (~> 2.0)
   - Toaster (2.0.3)
 
 DEPENDENCIES:
   - ARSLineProgress (~> 2.0)
+  - EasyRealm (~> 1.1.0)
   - Former
   - IQKeyboardManager
   - ObjectMapper (~> 2.2)
@@ -35,24 +44,31 @@ DEPENDENCIES:
   - SwiftDate (~> 4.0)
   - SwiftyJSON
   - SwiftyUserDefaults
-  - Swinject (~> 2.1.0)
+  - Swinject
+  - SwinjectAutoregistration
+  - SwinjectPropertyLoader
+  - SwinjectStoryboard
   - Toaster (~> 2.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  ARSLineProgress: 44dd1ec9994a4ddea7767944ecb9001046ecd697
+  ARSLineProgress: 688f3fe810515200186cebee349e06f822575fe6
+  EasyRealm: ae5d2f7f77e9d4de4fe17f0a9b3a82e22af4e854
   Former: 0b48a812c0d93b092b908d1b0574d0fd95c6b6f9
-  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
-  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
-  Realm: 29222766425b9f831228f81b63f0e38a97a4d700
-  RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
-  Siesta: ada9f35255e4eb16fad45cc3080927f6c6cba9cc
-  SwiftDate: 8ec416bb1b5129d1f35e8efaed720421f41d42df
+  IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
+  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
+  RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
+  Siesta: 920372f09b7cfd798074d85d8f3cf8505529a56e
+  SwiftDate: 2dfdebd4f67ae71c9c3e2413ee3c56947f302858
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
-  Swinject: 85e468ac75c5c2d234076f98c591d57d56bc64bc
+  Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
+  SwinjectAutoregistration: d19654c429354bad4b544c658dc92345ccdbb72c
+  SwinjectPropertyLoader: 5b26a1d3a6ba44fbe61425e06aba18ed64b76f4e
+  SwinjectStoryboard: 4c71c25f312322844d39ee06f0f523db7b9b10a3
   Toaster: 77c0b03d78e680bbbab0071c9c7ee392b0034010
 
-PODFILE CHECKSUM: 9edd02406a3574ecdd6b6fd84473f2c61f37e6a4
+PODFILE CHECKSUM: d828fd8385878b374bc0df9b26c7a9f8c347bf92
 
 COCOAPODS: 1.2.0
